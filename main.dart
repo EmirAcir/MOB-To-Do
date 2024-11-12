@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
-import 'todo_list_screen.dart';
+import 'login_screen.dart'; // Importiere den LoginScreen
 
-void main(){
-  runApp(MeineApp());
+void main() {
+  runApp(MyApp());
 }
 
-class MeineApp extends StatelessWidget{
-  const MeineApp({super.key});
-
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home:ToDoListScreen(),
+      title: 'To-do App',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: LoginScreen(), // Starte die App mit dem LoginScreen
     );
   }
 }
